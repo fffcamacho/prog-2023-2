@@ -72,18 +72,21 @@ dia_semana()
 # Se o delta calculado for igual a zero a equação possui apenas uma raiz real, informe-a ao usuário;
 # Se o delta for positivo, a equação possui duas raízes reais, informe-as ao usuário.
 
-a = (float(input("Digite o valor: ")))
-if a == 0:
-    print ("ENCERRADO.")
-else:
-    b = (float(input("Digite o valor: ")))
-    c = (float(input("Digite o valor: ")))
-    delta = b**2 - 4*a*c
-    r1 = (-b + delta **0.5)/(2*a)
-    r2 = (-b - delta **0.5)/(2*a)
-    if delta < 0:
-        print ("programa Encerrado! Delta negativo.")
-    elif delta == 0:
-        print ("A equação possui apenas uma raíz real")
+def equacao():
+    a = (float(input("Digite o valor: ")))
+    if a == 0:
+        print ("ENCERRADO.")
     else:
-        print ("A equação possui duas raízes reais")
+        b = (float(input("Digite o valor: ")))
+        c = (float(input("Digite o valor: ")))
+        delta = b**2 - 4*a*c
+        r1 = (-b + delta **0.5)/(2*a)
+        r2 = (-b - delta **0.5)/(2*a)
+        if delta < 0:
+            print ("programa Encerrado! Delta negativo.")
+        elif delta == 0:
+            print ("A equação possui apenas uma raíz real")
+        else:
+            print ("A equação possui duas raízes reais")
+
+equacao()
