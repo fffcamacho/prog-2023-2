@@ -37,17 +37,17 @@ e_primo(100)
 def divida(valor):
 
     juros = {
-        3: round(valor*0.1, 2),
-        6: round(valor*0.15, 2),
-        9: round(valor*0.2, 2),
-        12: round(valor*0.25, 2)
+        3: valor*0.1, 
+        6: valor*0.15,
+        9: valor*0.2,
+        12: valor*0.25
     }
     print ("valor dos juros R$   0", " valor total R$ ", valor, "Qt de parcelas 0 ", "valor da parcela R$ ", valor)
     for i in range(3,15,3):
         juro =int(juros[i])
         print("Valor dos juros R$ ", juro, "valor total R$ ", valor + juro, "Qt de parcelas", i, "valor da parcela R$ ", round((valor + juro)/i, 2))
 
-divida(1000)
+divida(833)
 
 
 
